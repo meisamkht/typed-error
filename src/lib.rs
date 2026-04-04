@@ -1,4 +1,3 @@
-#![forbid(unsafe_code)]
+pub mod code;
 
-/// A typed, transport-aware error system for Rust services.
-pub fn placeholder() {}
+pub use code::{ErrorCode, InvalidErrorCode};
