@@ -13,3 +13,8 @@ Instead of ad-hoc error handling, it provides:
 - Seamless mapping to HTTP and gRPC responses
 
 Built for real-world systems: APIs, microservices, and distributed architectures.
+
+## Status
+
+This is an initial placeholder release to establish the crate name on crates.io.
+The full implementation is currently in progress.
