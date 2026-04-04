@@ -9,3 +9,4 @@ pub mod retry;
 
 pub use code::{ErrorCode, InvalidErrorCode};
 pub use detail::{DetailValue, ErrorDetails};
+pub use retry::RetryHint;
