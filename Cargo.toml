@@ -1,9 +1,14 @@
 [package]
 name = "typed-error"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2024"
 license = "Apache-2.0"
-authors=["Meisam Khoshbakht"]
+authors = ["Meisam Khoshbakht"]
+description =  "A typed, transport-aware error system for Rust services with structured metadata, retry hints, and HTTP/gRPC mapping."
+repository = "https://github.com/meisamkht/typed-error"
+readme = "README.md"
+keywords = ["error", "errors", "http", "grpc", "axum"]
+categories = ["rust-patterns", "development-tools"]
 
 [features]
 default = ["std", "http", "serde"]
