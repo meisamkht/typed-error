@@ -1,0 +1,24 @@
+[package]
+name = "typed-error"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+authors=["Meisam Khoshbakht"]
+
+[features]
+default = ["std", "http", "serde"]
+
+std = []
+http = ["dep:http"]
+serde = ["dep:serde"]
+axum = ["http", "serde", "dep:axum", "dep:serde_json"]
+tonic = ["dep:tonic"]
+tracing = ["dep:tracing"]
+
+[dependencies]
+http = { version = "1", optional = true }
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
+axum = { version = "0.8", optional = true }
+tonic = { version = "0.14", optional = true }
+tracing = { version = "0.1", optional = true }

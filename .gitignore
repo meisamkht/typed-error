@@ -1,0 +1,19 @@
+# Rust build output
+/target
+
+# Library crates usually do not commit Cargo.lock
+Cargo.lock
+
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
