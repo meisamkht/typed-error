@@ -9,5 +9,6 @@ pub mod retry;
 
 pub use code::{ErrorCode, InvalidErrorCode};
 pub use detail::{DetailValue, ErrorDetails};
+pub use error::{AppError, AppErrorParts, BoxError};
 pub use kind::ErrorKind;
 pub use retry::RetryHint;
