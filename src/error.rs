@@ -193,6 +193,7 @@ impl AppError {
     /// # Examples
     ///
     /// ```rust
+    /// # use std::error::Error;
     /// # use typed_error::AppError;
     /// # use std::io;
     /// let source = io::Error::new(io::ErrorKind::NotFound, "config file missing");
