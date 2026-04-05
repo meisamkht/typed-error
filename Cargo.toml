@@ -15,8 +15,8 @@ default = ["std", "http", "serde"]
 
 std = []
 http = ["dep:http"]
-serde = ["dep:serde"]
-axum = ["http", "serde", "dep:axum", "dep:serde_json"]
+serde = ["dep:serde", "dep:serde_json"]
+axum = ["http", "serde", "dep:axum"]
 tonic = ["dep:tonic"]
 tracing = ["dep:tracing"]
 
