@@ -84,7 +84,7 @@ fn response_clones_details_when_borrowed_conversion_is_used() {
     );
 }
 
-#[cfg(feature = "serde")]
+#[cfg(feature = "json")]
 #[test]
 fn serializes_to_json() {
     let error = AppError::validation("INVALID_EMAIL")
