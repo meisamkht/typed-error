@@ -6,19 +6,24 @@ license = "Apache-2.0"
 authors = ["Meisam Khoshbakht"]
 description =  "A typed, transport-aware error system for Rust services with structured metadata, retry hints, and HTTP/gRPC mapping."
 repository = "https://github.com/meisamkht/typed-error"
+homepage = "https://github.com/meisamkht/typed-error"
 readme = "README.md"
 keywords = ["error", "errors", "http", "grpc", "axum"]
 categories = ["rust-patterns", "development-tools"]
 
 [features]
-default = ["std", "http", "serde"]
+default = ["std"]
 
 std = []
 http = ["dep:http"]
-serde = ["dep:serde", "dep:serde_json"]
-axum = ["http", "serde", "dep:axum"]
+serde = ["dep:serde"]
+json = ["serde", "dep:serde_json"]
+
+axum = ["http", "json", "dep:axum"]
 tonic = ["dep:tonic"]
 tracing = ["dep:tracing"]
+
+full = ["http", "json", "axum", "tonic", "tracing"]
 
 [dependencies]
 http = { version = "1", optional = true }

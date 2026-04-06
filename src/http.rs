@@ -1,4 +1,4 @@
-use http::StatusCode;
+use ::http::StatusCode;
 
 use crate::{AppError, ErrorKind};
 
