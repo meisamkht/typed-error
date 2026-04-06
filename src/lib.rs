@@ -2,6 +2,7 @@ pub mod code;
 pub mod detail;
 pub mod error;
 pub mod http;
+pub mod integration;
 pub mod kind;
 pub mod response;
 pub mod result;
