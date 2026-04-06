@@ -1,6 +1,6 @@
 [package]
 name = "typed-error"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
 authors = ["Meisam Khoshbakht"]
@@ -12,18 +12,16 @@ keywords = ["error", "errors", "http", "grpc", "axum"]
 categories = ["rust-patterns", "development-tools"]
 
 [features]
-default = ["std"]
+default = ["http", "json"]
 
-std = []
 http = ["dep:http"]
 serde = ["dep:serde"]
 json = ["serde", "dep:serde_json"]
 
 axum = ["http", "json", "dep:axum"]
 tonic = ["dep:tonic"]
-tracing = ["dep:tracing"]
 
-full = ["http", "json", "axum", "tonic", "tracing"]
+full = ["http", "json", "axum", "tonic"]
 
 [dependencies]
 http = { version = "1", optional = true }
@@ -31,7 +29,6 @@ serde = { version = "1", features = ["derive"], optional = true }
 serde_json = { version = "1", optional = true }
 axum = { version = "0.8", optional = true }
 tonic = { version = "0.14", optional = true }
-tracing = { version = "0.1", optional = true }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["macros", "rt"] }

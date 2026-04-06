@@ -4,10 +4,9 @@ pub mod error;
 
 #[cfg(feature = "http")]
 pub mod http;
-pub mod integration;
+pub mod integrations;
 pub mod kind;
 pub mod response;
-pub mod result;
 pub mod retry;
 
 pub use code::{ErrorCode, InvalidErrorCode};
